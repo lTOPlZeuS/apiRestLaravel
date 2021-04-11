@@ -24,11 +24,10 @@ class UserController extends Controller
     public function login (Request $request){
         $user = User::whereEmail($request->email)->first();
         if(!is_null($user) && Hash::check($request->password,$user->password)){
-            $user->api_token = Str::random(100);
-            $user->save();
+            $token = $user->createToken('contactos')->accessToken;
             return response()->json([
             'res' => true,
-            'token' => $user->api_token,
+            'token' => $token,
             'message'=>'Bienvenido al sistema'
         ],200);
         }else{
@@ -41,11 +40,13 @@ class UserController extends Controller
 
     public function logout (){
         $user = Auth::user();
-        $user->api_token = null;
+        $user->tokens->each(function($token,$key){
+            $token->delete();
+        });
         $user->save();
         return response()->json([
             'res' => true,
-            'message'=>'logout correcto'
+            'message'=>'Legout correcto'
         ],200);
     }
 }
