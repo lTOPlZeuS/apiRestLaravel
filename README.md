@@ -16,6 +16,7 @@ Este proyecto es un api rest sencillo sobre directorios con los siguientes campo
  - dirección
  - teléfono
  - foto
+
 Además de esto cuenta con 2 ramas uno con validación con un token generado aleatoriamente y otro con autenticación por personal acces token, la primera con la finalidad de solo conectar 1 usuario con las mismas credenciales 1 vez y el segundo para conectar varios.
 ### Pasos para correr el api rest:
 configurar el .env para poner a que base de datos se conectara a si como user y password
