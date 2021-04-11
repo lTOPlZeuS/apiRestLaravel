@@ -7,56 +7,31 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Api Rest con Laravel 8
+## Tecnologías usadas
+Este fue desarrollado con Laravel 8.36 y Postman
+## Descripción del proyecto
+Este proyecto es un api rest sencillo sobre directorios con los siguientes campos
+ - nombre
+ - dirección
+ - teléfono
+ - foto
+Además de esto cuenta con 2 ramas uno con validación con un token generado aleatoriamente y otro con autenticación por personal acces token, la primera con la finalidad de solo conectar 1 usuario con las mismas credenciales 1 vez y el segundo para conectar varios.
+### Pasos para correr el api rest:
+configurar el .env para poner a que base de datos se conectara a si como user y password
+ - `create database`
+Ingresamos al directorio del proyecto:
+ - `php artisan migrate -seed`
+ - `php artisan serve`
+## En Postman podemos interactuar con el api
+![Captura de pantalla de 2021-04-11 17-41-31](https://user-images.githubusercontent.com/22924166/114323968-5772cc80-9aed-11eb-85e9-52134802c593.png)
+![Captura de pantalla de 2021-04-11 17-41-33](https://user-images.githubusercontent.com/22924166/114323970-58a3f980-9aed-11eb-8054-401b05217365.png)
+![Captura de pantalla de 2021-04-11 17-41-34](https://user-images.githubusercontent.com/22924166/114323972-59d52680-9aed-11eb-8722-314f839d6c04.png)
+![Captura de pantalla de 2021-04-11 17-41-34-1](https://user-images.githubusercontent.com/22924166/114323974-5a6dbd00-9aed-11eb-803e-841a6a24fe18.png)
+![Captura de pantalla de 2021-04-11 17-41-35](https://user-images.githubusercontent.com/22924166/114323975-5b065380-9aed-11eb-8729-ef4d0cca65bf.png)
+![Captura de pantalla de 2021-04-11 17-41-37](https://user-images.githubusercontent.com/22924166/114323977-5c378080-9aed-11eb-966b-40787909bc29.png)
+![Captura de pantalla de 2021-04-11 17-41-40](https://user-images.githubusercontent.com/22924166/114323979-5d68ad80-9aed-11eb-8c2d-787b5f60f580.png)
+## Autor
+* Rocha Vicente Jesus Antonio
+### Contacto
+jesus_reddead@comunidad.unam.mx
