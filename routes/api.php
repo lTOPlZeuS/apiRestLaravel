@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::apiResource([DirectorioController::class,'index']);
+Route::post('users', [UserController::class,'store']);
 
-Route::apiResource('directorios','App\Http\Controllers\DirectorioController');
+Route::post('login', [UserController::class,'login ']);
+
+
+Route::group(['middleware'=>'auth:api'],function(){
+    Route::apiResource('directorios','App\Http\Controllers\DirectorioController');
+
+    Route::post('logout', [UserController::class,'logout']);
+});
